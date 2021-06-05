@@ -1,8 +1,9 @@
 import React from 'react';
+import './style.css';
 
 const KeyWord = ({keyword}) => {
   return(
-    <div>{keyword}</div>
+    <div className='keyword'>{keyword}</div>
   );
 };
 

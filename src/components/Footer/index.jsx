@@ -1,8 +1,9 @@
 import React from 'react';
+import './style.css';
 
-const Footer = () => {
+const Footer = ({fixedbottom = false}) => {
   return(
-    <div>Vytvořeno v rámci kurzu Czechitas a.s., Alžběta Myšková</div>
+    <div className={`footer ${fixedbottom ? 'fixedbottom' : ''}`}>Vytvořeno v rámci Czechitas a.s., © Alžběta Myšková, 2021</div>
   );
 };
 

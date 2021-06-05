@@ -16,7 +16,7 @@ const About = () => {
     <p>O Czechitas: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque minima ratione nulla iusto nostrum? Corporis, reiciendis repellat! Doloremque dolores cumque, repudiandae fugiat quo culpa et sed, iusto, soluta illum ad!
     Quibusdam aliquam cumque commodi nisi, hic doloribus. Recusandae laudantium consequatur obcaecati quis praesentium, laborum maxime aut. Earum odit incidunt illo in, tempore, ipsa officia inventore accusamus fuga quos maiores amet.
     In debitis placeat saepe cum officia accusantium deleniti animi corrupti magni numquam, repudiandae error nesciunt ea, perspiciatis dignissimos beatae consequuntur itaque sequi! Inventore ipsa fuga harum nulla facilis exercitationem vitae.</p>
-    <Footer />
+    <Footer fixedbottom={true}/>
     </>
   );
 };

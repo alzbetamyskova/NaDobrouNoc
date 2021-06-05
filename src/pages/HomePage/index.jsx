@@ -8,11 +8,11 @@ import './style.css';
 
 const HomePage = () => {
   return(
-    <div>
+    <div className='homepage'>
       <Header page={PAGES.home}/>
       <Descriptions />
       <ButtonTales />
-      <Footer />
+      <Footer fixedbottom={true}/>
     </div>
   );
 };

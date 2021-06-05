@@ -13,7 +13,7 @@ const ListOfTales = () => {
     <Header page={PAGES.listoftales}/>
     <Filter />
     <div>
-      {data.fairytales.map((tales) => <TalesView key={tales.id} name={tales.name} keywords={tales.keywords} text={tales.texttale}/>)}
+      {data.fairytales.map((tales) => <TalesView key={tales.id} id={tales.id} name={tales.name} keywords={tales.keywords} text={tales.texttale}/>)}
     </div>
     <Footer />
     </>

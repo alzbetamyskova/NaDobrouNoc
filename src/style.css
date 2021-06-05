@@ -21,4 +21,5 @@ body {
   border: 5px solid #4EA0AE;
   border-radius: 20px;
   margin: 0 auto;
+  position: relative;
 }

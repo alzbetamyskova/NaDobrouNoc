@@ -1,0 +1,22 @@
+.tales {
+  margin: 50px;
+}
+
+.tales h2 {
+  font-size: 30px;
+}
+
+.reader {
+  text-align: center;
+  font-size: 15px;
+}
+
+.youtube {
+  width: 640px;
+  height: 390px;
+  margin: 30px auto 5px auto;
+}
+
+.text {
+  margin-top: 40px;
+}

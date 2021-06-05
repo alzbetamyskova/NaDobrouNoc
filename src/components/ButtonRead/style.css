@@ -1,0 +1,21 @@
+.buttonread {
+  flex-grow: 0;
+  min-width: 70px;
+  border-radius: 8px;
+  border: none;
+  background-color: #4EA0AE;
+  color: #FFF48F;
+  padding: 7px;
+  cursor: pointer;
+  align-self: flex-end;
+  margin: 5px 10px 10px 0;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.arrow {
+  width: 10px;
+  filter: invert(95%) sepia(9%) saturate(3630%) hue-rotate(311deg) brightness(131%) contrast(101%);
+  margin-left: 5px;
+}

@@ -1,0 +1,23 @@
+.talesview {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.125);
+  border-radius: 20px;
+  margin: 20px;
+  padding: 10px;
+}
+
+.talesview h3 {
+  font-size: 25px;
+  margin: 20px 0;
+}
+
+.talesview p {
+  font-size: 17px;
+
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  overflow: hidden;
+}
