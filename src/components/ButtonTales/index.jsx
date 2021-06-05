@@ -1,6 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import data from '../../assets/database.json';
+import './style.css';
 
 const ButtonTales = (props) => {
 

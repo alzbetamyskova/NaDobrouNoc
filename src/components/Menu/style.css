@@ -1,0 +1,17 @@
+.menu ul {
+  display: flex;
+  list-style: none;
+}
+
+.menu li {
+  margin: 0 10px;
+  background-color: #3B2E5A;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 17px;
+}
+
+.link {
+  color: #FFF48F;
+  text-decoration: none;
+}
