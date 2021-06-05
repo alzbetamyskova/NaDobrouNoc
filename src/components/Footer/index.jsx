@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
   return(
-    <div>Footer</div>
+    <div>Vytvořeno v rámci kurzu Czechitas a.s., Alžběta Myšková</div>
   );
 };
 

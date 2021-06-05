@@ -1,8 +1,12 @@
 import React from 'react';
+import Menu from '../Menu';
 
-const Header = () => {
+const Header = ({page}) => {
   return(
-    <div>Header</div>
+    <div>
+      <h3>Na dobrou noc</h3>
+      <Menu page={page}/>
+    </div>
   );
 };
 

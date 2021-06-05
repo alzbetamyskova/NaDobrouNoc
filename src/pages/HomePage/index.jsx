@@ -3,11 +3,12 @@ import ButtonTales from '../../components/ButtonTales';
 import Descriptions from '../../components/Descriptions';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
+import { PAGES } from '../../helpers/index.js';
 
 const HomePage = () => {
   return(
     <div>
-      <Header />
+      <Header page={PAGES.home}/>
       <Descriptions />
       <ButtonTales />
       <Footer />
