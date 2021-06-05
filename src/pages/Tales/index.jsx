@@ -5,8 +5,13 @@ import data from '../../assets/database.json';
 import Footer from '../../components/Footer';
 import YouTube from 'react-youtube';
 import './style.css';
+import unicorn from '../../components/AudioPlayer/img/unicorn.png';
+import AudioPlayer from '../../components/AudioPlayer/AudioPlayer';
 
 const Tales = (props) => {
+
+  const path = require('../../assets/pohadkaone.mp3');
+  const audio = new Audio(path)
 
   const fairytale = data.fairytales[props.match.params.id - 1];
 
@@ -43,7 +48,11 @@ const Tales = (props) => {
           }
         {fairytale.youtubeid ?
         <p className='reader'>Namluvil: {fairytale.reader}</p> : ''}
-        <p class='text'>{fairytale.texttale}</p>
+        {fairytale.audio ?
+        <div className='audio'><AudioPlayer tracks={[{...fairytale.audio, audioSrc:audio, image:unicorn}]} /></div>
+        : ''  
+      }
+        <p className='text'>{fairytale.texttale}</p>
       </div>
       <Footer fixedbottom={true} />
     </div>
