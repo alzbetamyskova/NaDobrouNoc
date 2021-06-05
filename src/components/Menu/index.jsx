@@ -11,12 +11,15 @@ const Menu = ({page}) => {
         <Link to="/">Domů</Link>
       </li> }
 
+      {page === PAGES.listoftales ? '' :
+      <li>
+        <Link to="/listoftales">Seznam pohádek</Link>
+       </li> }
+
+      {page === PAGES.about ? '' : 
       <li>
         <Link to="/about">O projektu</Link>
-       </li>
-      <li>
-        <Link to="/users">Seznam pohádek</Link>
-      </li>
+      </li> }
     </ul>
   );
 };

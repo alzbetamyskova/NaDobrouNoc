@@ -10,6 +10,8 @@ import {
 } from 'react-router-dom';
 
 import './style.css';
+import About from './pages/About';
+import ListOfTales from './pages/LisOfTales';
 
 const App = () => (
   <div className="container">
@@ -17,6 +19,8 @@ const App = () => (
       <Switch>
           <Route exact path="/"> <HomePage /> </Route>
           <Route exact path="/tales/:id" component={Tales}/>
+          <Route exact path="/about"> <About /> </Route>
+          <Route exact path="/listoftales"> <ListOfTales /> </Route>
       </Switch>
     </Router>
   </div>
