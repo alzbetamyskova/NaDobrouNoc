@@ -1,18 +1,24 @@
 import React from 'react';
 import { render } from 'react-dom';
+import HomePage from './pages/HomePage';
+import Tales from './pages/Tales';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from 'react-router-dom';
+
 import './style.css';
 
 const App = () => (
   <div className="container">
-    <header>
-      <div className="logo"></div>
-      <h1>Na dobrou noc</h1>
-    </header>
-    <main>
-    </main>
-    <footer>
-      <p>© Alžběta Myšková, 2021</p>
-    </footer>
+    <Router>
+      <Switch>
+          <Route exact path="/"> <HomePage /> </Route>
+          <Route exact path="/tales/:id" component={Tales}/>
+      </Switch>
+    </Router>
   </div>
 );
 
