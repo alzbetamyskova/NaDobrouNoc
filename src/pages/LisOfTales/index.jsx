@@ -9,13 +9,15 @@ import './style.css';
 
 const ListOfTales = () => {
 
+  const [viewTales, setViewTales] = useState(data.fairytales);
+
   return(
     <>
     <Header page={PAGES.listoftales}/>
-    <Filter />
+    <Filter setViewTales={setViewTales}/>
     <h4 className='nadpisSeznam'>Seznam všech pohádek</h4>
     <div>
-      {data.fairytales.map((tales) => <TalesView key={tales.id} id={tales.id} name={tales.name} keywords={tales.keywords} text={tales.texttale}/>)}
+      {viewTales.map((tales) => <TalesView key={tales.id} id={tales.id} name={tales.name} keywords={tales.keywords} text={tales.texttale}/>)}
     </div>
     <Footer />
     </>

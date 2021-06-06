@@ -12,6 +12,7 @@ import {
 import './style.css';
 import About from './pages/About';
 import ListOfTales from './pages/LisOfTales';
+import AudioTales from './pages/AudioTales';
 
 const App = () => (
   <div className="container">
@@ -21,6 +22,7 @@ const App = () => (
           <Route exact path="/tales/:id" component={Tales}/>
           <Route exact path="/about"> <About /> </Route>
           <Route exact path="/listoftales"> <ListOfTales /> </Route>
+          <Route exact path="/audiotales"> <AudioTales /> </Route>
       </Switch>
     </Router>
   </div>

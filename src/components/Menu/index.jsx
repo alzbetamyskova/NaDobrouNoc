@@ -18,6 +18,11 @@ const Menu = ({page}) => {
           <Link className='link' to="/listoftales">Seznam pohádek</Link>
         </li> }
 
+        {page === PAGES.audiotales ? '' : 
+        <li>
+          <Link className='link' to="/audiotales">Poslech pohádek</Link>
+        </li> }
+
         {page === PAGES.about ? '' : 
         <li>
           <Link className='link' to="/about">O projektu</Link>

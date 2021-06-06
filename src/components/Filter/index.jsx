@@ -5,16 +5,31 @@ import './style.css';
 import data from '../../assets/database.json';
 
 
-const Filter = () => {
+const Filter = ({setViewTales}) => {
 
   const [filtrKeyWords, setFiltrKeyWords] = useState([]);
 
   const filtrItems = () => {
     let filtrItems = [];
+
+    let condition1 = false;
+    let condition2 = false;
+    let condition3 = false;
     
-    filtrItems = data.fairytales.forEach(fairytale => (
-      fairytale.keywords.some(keyword => (keyword === filtrKeyWords[0]))
-    )); 
+    data.fairytales.forEach(fairytale => {
+      condition1 = fairytale.keywords.some(keyword => (keyword === filtrKeyWords[0]))
+      if (!condition1 && filtrKeyWords[1]) {
+      condition2 = fairytale.keywords.some(keyword => (keyword === filtrKeyWords[1]))
+      } else if (!condition2 && filtrKeyWords[2]) {
+      condition3 = fairytale.keywords.some(keyword => (keyword === filtrKeyWords[2]))
+      };
+
+      if (condition1 || condition2 || condition3) {
+        filtrItems.push(fairytale)
+      };
+    }); 
+
+    
 
     return(
       filtrItems
@@ -23,8 +38,8 @@ const Filter = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    filtrItems();
-    console.log(filtrKeyWords.length);
+    let talesArray = filtrItems();
+    setViewTales(talesArray);
   };
 
   return(

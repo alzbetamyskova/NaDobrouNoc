@@ -37,5 +37,25 @@
       "reader": "Oldřich Navrátil"
     }
   ],
-  "keywords":["princezna", "princ", "video", "auto", "barbie", "audio"]
+  "keywords":["princezna", "princ", "video", "auto", "barbie", "audio"],
+  "audio": [
+    {
+      "title": "Pohadka 1",
+      "artist": "Neznámý",
+      "audioSrc": "https://firebasestorage.googleapis.com/v0/b/nadobrounoc-e4493.appspot.com/o/Audio%2Fpohadka1.mp3?alt=media&token=3ae259d2-5e65-47a4-b7e7-c5ae82252945",
+      "color": "#4EA0AE"
+    },
+    {
+      "title": "Pohadka 2",
+      "artist": "Neznámý",
+      "audioSrc": "https://firebasestorage.googleapis.com/v0/b/nadobrounoc-e4493.appspot.com/o/Audio%2Fpohadka1.mp3?alt=media&token=3ae259d2-5e65-47a4-b7e7-c5ae82252945",
+      "color": "#4EA0AE"
+    },
+    {
+      "title": "Pohadka 3",
+      "artist": "Neznámý",
+      "audioSrc": "https://firebasestorage.googleapis.com/v0/b/nadobrounoc-e4493.appspot.com/o/Audio%2Fpohadka1.mp3?alt=media&token=3ae259d2-5e65-47a4-b7e7-c5ae82252945",
+      "color": "#4EA0AE"
+    }
+  ]
 }

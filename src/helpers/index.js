@@ -1,6 +1,6 @@
 'use strict';
 
-export const PAGES = {home:'home', listoftales:'listoftales', about:'about', tales: 'tales'};
+export const PAGES = {home:'home', listoftales:'listoftales', about:'about', tales: 'tales', aduiotales: 'audiotales'};
 
 
 
