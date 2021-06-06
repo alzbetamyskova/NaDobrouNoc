@@ -9,7 +9,7 @@
       "audio": {
         "title": "Pohadka 1",
         "artist": "Neznámý",
-        "audioSrc": "../../assets/pohadka1.mp3",
+        "audioSrc": "https://firebasestorage.googleapis.com/v0/b/nadobrounoc-e4493.appspot.com/o/Audio%2Fpohadka1.mp3?alt=media&token=3ae259d2-5e65-47a4-b7e7-c5ae82252945",
         "color": "#4EA0AE"
       }
     },

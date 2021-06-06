@@ -1,24 +1,27 @@
 import React from "react";
-import { ReactComponent as Play } from "../../assets/play.svg";
-import { ReactComponent as Pause } from "../../assets/pause.svg";
-import { ReactComponent as Next } from "../../assets/next.svg";
-import { ReactComponent as Prev } from "../../assets/prev.svg";
+import play from "../../assets/play.svg";
+import pause from "../../assets/pause.svg";
+import next from "../../assets/next.svg";
+import prev from "../../assets/prev.svg";
+import { PAGES } from '../../helpers/index.js';
 
 const AudioControls = ({
+  page,
   isPlaying,
   onPlayPauseClick,
   onPrevClick,
   onNextClick
 }) => (
-  <div className="audio-controls">
+  <div className={`audio-controls ${page === PAGES.tales ? 'play-button-center' : ''}`}>
+    {page === PAGES.tales ? '' :
     <button
       type="button"
       className="prev"
       aria-label="Previous"
       onClick={onPrevClick}
     >
-      <Prev />
-    </button>
+      <img src={prev} />
+    </button> }
     {isPlaying ? (
       <button
         type="button"
@@ -26,7 +29,7 @@ const AudioControls = ({
         onClick={() => onPlayPauseClick(false)}
         aria-label="Pause"
       >
-        <Pause />
+        <img src={pause} />
       </button>
     ) : (
       <button
@@ -35,17 +38,18 @@ const AudioControls = ({
         onClick={() => onPlayPauseClick(true)}
         aria-label="Play"
       >
-        <Play />
+        <img src={play} />
       </button>
     )}
+    {page === PAGES.tales ? '' :
     <button
       type="button"
       className="next"
       aria-label="Next"
       onClick={onNextClick}
     >
-      <Next />
-    </button>
+      <img src={next} />
+    </button> }
   </div>
 );
 

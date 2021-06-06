@@ -38,6 +38,7 @@ input[type="range"] {
   box-shadow: 0 28px 28px rgba(0, 0, 0, 0.2);
   margin: auto;
   color: var(--white);
+  position: relative;
 }
 
 .artwork {
@@ -71,16 +72,22 @@ input[type="range"] {
   margin: 0 auto 15px;
 }
 
-.audio-controls .prev svg,
-.audio-controls .next svg {
-  width: 35px;
-  height: 35px;
+.play-button-center {
+  justify-content: center;
 }
 
-.audio-controls .play svg,
-.audio-controls .pause svg {
+.audio-controls .prev img,
+.audio-controls .next img {
+  width: 35px;
+  height: 35px;
+  filter: invert(100%);
+}
+
+.audio-controls .play img,
+.audio-controls .pause img {
   height: 40px;
   width: 40px;
+  filter: invert(100%);
 }
 
 .audio-controls path {
@@ -88,25 +95,37 @@ input[type="range"] {
 }
 
 .color-backdrop {
-  background: linear-gradient(45deg, var(--active-color) 20%, transparent 100%)
+  background: linear-gradient(45deg, var(--active-color) 20%, rgba(78, 160, 174, 0.2) 100%)
     no-repeat;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: -1;
+  border-radius: 20px;
 }
 
 .color-backdrop.playing {
-  animation: colorChange 20s alternate infinite;
+  animation: colorChange 10s alternate infinite;
 }
 
 @keyframes colorChange {
-  from {
+  /* from {
     filter: hue-rotate(0deg);
   }
   to {
-    filter: hue-rotate(360deg);
+    filter: hue-rotate(200deg);
+  } */
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  65% {
+    filter: hue-rotate(80deg);
+  }
+  95% {
+    filter: hue-rotate(-10deg);
+  }
+  100% {
+    filter: hue-rotate(0deg);
   }
 }

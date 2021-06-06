@@ -7,11 +7,9 @@ import YouTube from 'react-youtube';
 import './style.css';
 import unicorn from '../../components/AudioPlayer/img/unicorn.png';
 import AudioPlayer from '../../components/AudioPlayer/AudioPlayer';
+import { PAGES } from '../../helpers';
 
 const Tales = (props) => {
-
-  const path = require('../../assets/pohadkaone.mp3');
-  const audio = new Audio(path)
 
   const fairytale = data.fairytales[props.match.params.id - 1];
 
@@ -49,7 +47,7 @@ const Tales = (props) => {
         {fairytale.youtubeid ?
         <p className='reader'>Namluvil: {fairytale.reader}</p> : ''}
         {fairytale.audio ?
-        <div className='audio'><AudioPlayer tracks={[{...fairytale.audio, audioSrc:audio, image:unicorn}]} /></div>
+        <div className='audio'><AudioPlayer page={PAGES.tales} tracks={[{...fairytale.audio, image:unicorn}]} /></div>
         : ''  
       }
         <p className='text'>{fairytale.texttale}</p>
