@@ -35,7 +35,7 @@ const Tales = (props) => {
       <Header />
       <div className='tales'>
         <h2>{fairytale.name}</h2>
-        <KeyWords keywords={fairytale.keywords}/>
+        <KeyWords islight={true} keywords={fairytale.keywords}/>
         {fairytale.youtubeid ? 
         <div className='youtube'><YouTube 
           videoId={fairytale.youtubeid} 

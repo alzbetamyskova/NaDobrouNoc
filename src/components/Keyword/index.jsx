@@ -1,9 +1,9 @@
 import React from 'react';
 import './style.css';
 
-const KeyWord = ({keyword}) => {
+const KeyWord = ({islight, keyword}) => {
   return(
-    <div className='keyword'>{keyword}</div>
+    <div className={`keyword ${islight ? 'keywordLight' : ''}`}>{keyword}</div>
   );
 };
 

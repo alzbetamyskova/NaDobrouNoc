@@ -1,0 +1,17 @@
+.buttonsearch {
+  align-self: flex-end;
+  border-radius: 8px;
+  border: none;
+  background-color: #4EA0AE;
+  color: #FFF48F;
+  padding: 7px;
+  cursor: pointer;
+  margin: 20px 10px 0 0;
+  font-size: 15px;
+}
+
+.disabled {
+  background-color: #b8b8b8;
+  color: #585858;
+  cursor: not-allowed;
+}
