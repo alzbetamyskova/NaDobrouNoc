@@ -6,8 +6,24 @@
   align-items: center;
 }
 
-.logo {
+.textlogo {
+  font-family: 'Amatic SC', cursive;
+  font-size: 30px;
   margin: 0;
-  margin-left: 20px;
+  margin-bottom: 15px;
+  margin-left: -10px;
   text-transform: uppercase;
+  flex: 1 0 170px;
+
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.moon {
+  max-width: 45px;
+  margin-left: 20px;
+  filter: invert(85%) sepia(42%) saturate(422%) hue-rotate(350deg) brightness(105%) contrast(107%);
 }
