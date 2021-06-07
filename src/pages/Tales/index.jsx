@@ -8,6 +8,9 @@ import './style.css';
 import unicorn from '../../components/AudioPlayer/img/unicorn.png';
 import AudioPlayer from '../../components/AudioPlayer/AudioPlayer';
 import { PAGES } from '../../helpers';
+import ButtonTales from '../../components/ButtonTales';
+import ButtonPrev from '../../components/ButtonPrev';
+import ButtonNext from '../../components/ButtonNext';
 
 const Tales = (props) => {
 
@@ -52,7 +55,12 @@ const Tales = (props) => {
       }
         <p className='text'>{fairytale.texttale}</p>
       </div>
-      <Footer fixedbottom={true} />
+      <div className='buttonstale'>
+        <ButtonPrev />
+        <ButtonTales />
+        <ButtonNext />
+      </div>
+      <Footer fixedbottom={false} />
     </div>
   );
 };

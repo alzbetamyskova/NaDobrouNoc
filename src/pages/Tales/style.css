@@ -1,5 +1,5 @@
 .tales {
-  margin: 50px;
+  margin: 50px 50px 20px 50px;
 }
 
 .tales h2 {
@@ -19,4 +19,10 @@
 
 .text {
   margin-top: 40px;
+}
+
+.buttonstale {
+  display: flex;
+  justify-content: space-around;
+  margin: 30px auto;
 }
