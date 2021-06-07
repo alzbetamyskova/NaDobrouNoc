@@ -5,14 +5,13 @@ import data from '../../assets/database.json';
 
 const ButtonPrev = (props) => {
 
-  // const handleClick = () => {
-  //   const idTales = něconěco;
-  //   props.history.push(`/tales/${idTales - 1}`);
-  // }
+  const handleClick = () => {
+    const idTales = props.id;
+    props.history.push(`/tales/${idTales - 1}`);
+  }
 
   return(
-
-    <button className='buttonprev' >Předchozí pohádka</button>
+    <button className='buttonprev' onClick={handleClick}>Předchozí pohádka</button>
   );
 };
 

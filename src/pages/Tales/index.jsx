@@ -55,9 +55,9 @@ const Tales = (props) => {
         <p className='text'>{fairytale.texttale}</p>
       </div>
       <div className='buttonstale'>
-        <ButtonPrev />
+        <ButtonPrev id={fairytale.id}/>
         <ButtonTales />
-        <ButtonNext />
+        <ButtonNext id={fairytale.id}/>
       </div>
       <Footer fixedbottom={false} />
     </div>

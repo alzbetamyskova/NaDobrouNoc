@@ -18,12 +18,6 @@ const App = () => {
 
   const [appData, setAppData] = useState('');
 
-  // const fetchData = async () => {
-  //   fetch('https://nadobrounoc-e4493-default-rtdb.europe-west1.firebasedatabase.app/data.json')
-  //       .then((resp) => resp.json())
-  //       .then((json) => setAppData(json))
-  // }
-
   useEffect(
     () => {
       fetch('https://nadobrounoc-e4493-default-rtdb.europe-west1.firebasedatabase.app/data.json')
