@@ -20,10 +20,10 @@ const Filter = ({setViewTales}) => {
       condition1 = fairytale.keywords.some(keyword => (keyword === filtrKeyWords[0]))
       if (!condition1 && filtrKeyWords[1]) {
       condition2 = fairytale.keywords.some(keyword => (keyword === filtrKeyWords[1]))
-      } else if (!condition2 && filtrKeyWords[2]) {
+      } 
+      if ((!condition1 || !condition2) && filtrKeyWords[2]) {
       condition3 = fairytale.keywords.some(keyword => (keyword === filtrKeyWords[2]))
       };
-
       if (condition1 || condition2 || condition3) {
         filtrItems.push(fairytale)
       };

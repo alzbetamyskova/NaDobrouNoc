@@ -1,7 +1,5 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { render } from 'react-dom';
-import HomePage from './pages/HomePage';
-import Tales from './pages/Tales';
 import {
   BrowserRouter as Router,
   Switch,
@@ -10,22 +8,43 @@ import {
 } from 'react-router-dom';
 
 import './style.css';
+import HomePage from './pages/HomePage';
+import Tales from './pages/Tales';
 import About from './pages/About';
 import ListOfTales from './pages/LisOfTales';
 import AudioTales from './pages/AudioTales';
 
-const App = () => (
+const App = () => { 
+
+  const [appData, setAppData] = useState('');
+
+  // const fetchData = async () => {
+  //   fetch('https://nadobrounoc-e4493-default-rtdb.europe-west1.firebasedatabase.app/data.json')
+  //       .then((resp) => resp.json())
+  //       .then((json) => setAppData(json))
+  // }
+
+  useEffect(
+    () => {
+      fetch('https://nadobrounoc-e4493-default-rtdb.europe-west1.firebasedatabase.app/data.json')
+        .then((resp) => resp.json())
+        .then((json) => setAppData(json))
+    }, []
+  );
+
+return(
   <div className="container">
     <Router>
       <Switch>
           <Route exact path="/"> <HomePage /> </Route>
-          <Route exact path="/tales/:id" component={Tales}/>
+          <Route exact path="/tales/:id" component={(props) => <Tales {...props} appData={appData} />}/>
           <Route exact path="/about"> <About /> </Route>
-          <Route exact path="/listoftales"> <ListOfTales /> </Route>
-          <Route exact path="/audiotales"> <AudioTales /> </Route>
+          <Route exact path="/listoftales" component={(props) => <ListOfTales {...props} appData={appData} setAppData={setAppData}/>}/>
+          <Route exact path="/audiotales" component={(props) => <AudioTales {...props} appData={appData} />}/>
       </Switch>
     </Router>
   </div>
 );
+};
 
 render(<App />, document.querySelector('#app'));

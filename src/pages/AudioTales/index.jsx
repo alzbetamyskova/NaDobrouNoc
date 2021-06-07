@@ -4,14 +4,14 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import { PAGES } from '../../helpers';
 import unicorn from '../../components/AudioPlayer/img/unicorn.png';
-import data from '../../assets/database.json';
+import './style.css';
 
-const AudioTales = () => {
+const AudioTales = (props) => {
   return(
     <div className='audiotales'>
       <Header page={PAGES.audiotales}/>
-      <h3>Poslech pohádek</h3>
-      <AudioPlayer tracks={data.audio}/>
+      <h3 className='audioh3'>Poslech pohádek</h3>
+      <AudioPlayer tracks={props.appData.audio}/>
       <Footer fixedbottom={true}/>
     </div>
   );

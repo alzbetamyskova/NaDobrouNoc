@@ -4,12 +4,11 @@ import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import TalesView from '../../components/TalesView';
 import { PAGES } from '../../helpers/index.js';
-import data from '../../assets/database.json';
 import './style.css';
 
-const ListOfTales = () => {
+const ListOfTales = (props) => {
 
-  const [viewTales, setViewTales] = useState(data.fairytales);
+  const [viewTales, setViewTales] = useState(props.appData.fairytales);
 
   return(
     <>

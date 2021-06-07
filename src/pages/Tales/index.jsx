@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Header from '../../components/Header';
 import KeyWords from '../../components/KeyWords';
-import data from '../../assets/database.json';
 import Footer from '../../components/Footer';
 import YouTube from 'react-youtube';
 import './style.css';
@@ -14,7 +13,7 @@ import ButtonNext from '../../components/ButtonNext';
 
 const Tales = (props) => {
 
-  const fairytale = data.fairytales[props.match.params.id - 1];
+  const fairytale = props.appData.fairytales[props.match.params.id - 1];
 
   const opts = {
     height: '390',
