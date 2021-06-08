@@ -1,7 +1,6 @@
 import React from 'react';
 import './style.css';
 import { withRouter } from 'react-router-dom';
-import data from '../../assets/database.json';
 
 const ButtonNext = (props) => {
 

@@ -14,7 +14,7 @@ import ButtonNext from '../../components/ButtonNext';
 const Tales = (props) => {
 
   const fairytale = props.appData.fairytales[props.match.params.id - 1];
-
+  
   const opts = {
     height: '390',
     width: '640',
