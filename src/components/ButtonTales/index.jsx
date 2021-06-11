@@ -1,6 +1,5 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import data from '../../assets/database.json';
 import './style.css';
 
 const ButtonTales = (props) => {
@@ -8,7 +7,7 @@ const ButtonTales = (props) => {
 
   const randomNumber = () => {
     return(
-      Math.floor(Math.random() * data.fairytales.length + 1)
+      Math.floor(Math.random() * props.appData.fairytales.length + 1)
     );
   };
 

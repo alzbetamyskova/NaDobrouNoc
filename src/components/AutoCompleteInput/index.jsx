@@ -3,7 +3,6 @@ import React from 'react';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
-import data from '../../assets/database.json';
 import './style.css';
 
 const useStyles = makeStyles((theme) => ({
@@ -31,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
 
 const placeholder = ["Vyberte 3 klíčová slova", "Další slovo", "Zbývá 1 slovo", "Už nevybírej"];
 
-const AutoCompleteInput = ({filtrKeyWords, setFiltrKeyWords}) => {
+const AutoCompleteInput = ({appData, filtrKeyWords, setFiltrKeyWords}) => {
   const classes = useStyles();
 
   const handleChange = (event, value) => {
@@ -46,7 +45,7 @@ const AutoCompleteInput = ({filtrKeyWords, setFiltrKeyWords}) => {
         multiple
         limitTags={3}
         id="multiple-limit-tags"
-        options={data.keywords}
+        options={appData.keywords}
         getOptionLabel={(option) => option}
         defaultValue={filtrKeyWords}
         renderInput={(params) => (

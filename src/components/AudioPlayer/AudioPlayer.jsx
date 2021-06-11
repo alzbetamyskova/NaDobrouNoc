@@ -3,6 +3,8 @@ import AudioControls from "./AudioControls";
 import Backdrop from "./Backdrop";
 import "./style.css";
 
+
+const defaultImg = "https://firebasestorage.googleapis.com/v0/b/nadobrounoc-e4493.appspot.com/o/img%2FLamaHi%20112.png?alt=media&token=a8199f4f-16a1-45cb-80cc-d3ac7dbdd511";
 /*
  * Read the blog post here:
  * https://letsbuildui.dev/articles/building-an-audio-player-with-react-hooks
@@ -14,7 +16,7 @@ const AudioPlayer = ({ tracks, page }) => {
   const [isPlaying, setIsPlaying] = useState(false);
 
   // Destructure for conciseness
-  const { title, artist, color, image, audioSrc } = tracks[trackIndex];
+  const { title, artist, color, img, audioSrc } = tracks[trackIndex];
 
   // Refs
   const audioRef = useRef(new Audio(audioSrc));
@@ -114,7 +116,7 @@ const AudioPlayer = ({ tracks, page }) => {
       <div className="track-info">
         <img
           className="artwork"
-          src={image}
+          src={img ? img : defaultImg}
           alt={`track artwork for ${title} by ${artist}`}
         />
         <h2 className="title">{title}</h2>

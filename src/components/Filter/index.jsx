@@ -2,10 +2,9 @@ import React, { useState } from 'react';
 import AutoCompleteInput from '../AutoCompleteInput';
 import ButtonSearch from '../ButtonSearch';
 import './style.css';
-import data from '../../assets/database.json';
 
 
-const Filter = ({setViewTales}) => {
+const Filter = ({appData, setViewTales}) => {
 
   const [filtrKeyWords, setFiltrKeyWords] = useState([]);
 
@@ -16,7 +15,7 @@ const Filter = ({setViewTales}) => {
     let condition2 = false;
     let condition3 = false;
     
-    data.fairytales.forEach(fairytale => {
+    appData.fairytales.forEach(fairytale => {
       condition1 = fairytale.keywords.some(keyword => (keyword === filtrKeyWords[0]))
       if (!condition1 && filtrKeyWords[1]) {
       condition2 = fairytale.keywords.some(keyword => (keyword === filtrKeyWords[1]))
@@ -46,7 +45,7 @@ const Filter = ({setViewTales}) => {
     <div>
       <form className='form' onSubmit={handleSubmit}>
         <h4>Vyberte maximálně 3 klíčová slova:</h4>
-        <AutoCompleteInput filtrKeyWords={filtrKeyWords} setFiltrKeyWords={setFiltrKeyWords}/>
+        <AutoCompleteInput appData={appData} filtrKeyWords={filtrKeyWords} setFiltrKeyWords={setFiltrKeyWords}/>
         <ButtonSearch filtrKeyWords={filtrKeyWords}/>        
       </form>
     </div>

@@ -3,7 +3,7 @@ import './style.css';
 
 const Footer = ({fixedbottom = false}) => {
   return(
-    <div className={`footer ${fixedbottom ? 'fixedbottom' : ''}`}>Vytvořeno v rámci Czechitas a.s., © Alžběta Myšková, 2021</div>
+    <div className={`footer ${fixedbottom ? 'fixedbottom' : ''}`}>Vytvořeno v rámci Czechitas z.s., © Alžběta Myšková, 2021</div>
   );
 };
 

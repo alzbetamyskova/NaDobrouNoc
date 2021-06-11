@@ -1,8 +1,11 @@
 import React from 'react';
-import Descriptions from '../../components/Descriptions';
+
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
+import ButtonUp from '../../components/ButtonUp';
+
 import { PAGES } from '../../helpers';
+
 import './style.css';
 
 const About = () => {
@@ -14,6 +17,7 @@ const About = () => {
       <p>Milé děti, milí dospělí, povím Vám pohádku. Usaďte se a přeji pěkné čtení.</p>
       <p>O Czechitas:</p>
     </div>
+    <ButtonUp />
     <Footer fixedbottom={true}/>
     </>
   );
