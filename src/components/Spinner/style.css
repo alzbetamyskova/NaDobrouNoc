@@ -1,10 +1,12 @@
 .circle-container {
+  width: 100%;
+  height: calc(100vh - 115px);
   position: relative;
-  display: block;
+  display: flex;
   box-sizing: border-box;
   padding: 30px;
-  width: 25%;
-  height: 140px;
+  justify-content: center;
+  align-items: center;
 }
 
 .circle {
@@ -15,6 +17,10 @@
   border: 10px solid rgba(255, 255, 255, 0.2);
   border-top-color: #FFF;
   animation: spin 1s infinite linear;
+}
+
+.heightauto {
+  height: auto;
 }
 
 @keyframes spin { 

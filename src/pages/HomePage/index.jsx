@@ -12,7 +12,7 @@ const HomePage = ({appData}) => {
     <div className='homepage'>
       <Header page={PAGES.home}/>
       <Descriptions />
-      {!appData ? <Spinner /> : 
+      {!appData ? <Spinner heightauto={true}/> : 
       <div>
         <ButtonTales appData={appData}/>
       </div>}

@@ -1,9 +1,9 @@
 import React from 'react';
 import './style.css';
 
-const Spinner = () => {
+const Spinner = ({heightauto}) => {
   return(
-    <div className="circle-container">
+    <div className={`circle-container ${heightauto ? 'heightauto' : ''}`}>
       <div className="circle"></div>
     </div>
   );
