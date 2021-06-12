@@ -9,6 +9,12 @@
   margin: 20px 10px 0 0;
   font-size: 15px;
   font-family: 'Quicksand', sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+
+.buttonsearch:hover {
+	background-color: #FFF48F;
+  color: #3B2E5A;
 }
 
 .disabled {

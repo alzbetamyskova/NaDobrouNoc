@@ -14,10 +14,21 @@
   position: fixed;
   bottom: 20px;
   right: 20px;
+  transition: all 0.3s ease-in-out;
 }
+
+.buttonup:hover {
+	background-color: #FFF48F;
+  color: #3B2E5A;
+}
+
 
 .up {
   width: 10px;
   filter: invert(95%) sepia(9%) saturate(3630%) hue-rotate(311deg) brightness(131%) contrast(101%);
   margin-left: 5px;
+}
+
+.up:hover {
+  filter: invert(15%) sepia(59%) saturate(609%) hue-rotate(217deg) brightness(99%) contrast(90%);
 }

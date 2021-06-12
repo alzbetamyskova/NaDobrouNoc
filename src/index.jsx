@@ -20,13 +20,12 @@ const App = () => {
 
   useEffect(
     () => {
-      fetch('https://nadobrounoc-e4493-default-rtdb.europe-west1.firebasedatabase.app/data.json')
+      !appData && fetch('https://nadobrounoc-e4493-default-rtdb.europe-west1.firebasedatabase.app/data.json')
         .then((resp) => resp.json())
         .then((json) => {
           setAppData(json);
-          localStorage.setItem('fairyTales', JSON.stringify(json));
         })
-    }, []
+    }, [appData]
   );
 
 return(

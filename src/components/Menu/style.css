@@ -5,13 +5,20 @@
 
 .menu li {
   margin: 0 10px;
-  background-color: #3B2E5A;
-  border-radius: 10px;
-  padding: 10px;
   font-size: 17px;
 }
 
 .link {
+  display: block;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #3B2E5A;
   color: #FFF48F;
   text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.link:hover {
+  background-color: #FFF48F;
+  color: #3B2E5A;
 }

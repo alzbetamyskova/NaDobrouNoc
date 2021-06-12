@@ -35,26 +35,13 @@ const Tales = (props) => {
 
   useEffect(
     () => {
-      let isMounted = true;
       if (!props.appData) {
-        console.log('1')
-        if (localStorage.getItem('fairyTales')) {
-          console.log('2')
-          let data = JSON.parse(localStorage.getItem('fairyTales'));
-          props.setAppData(data)
-          console.log(data);
-          console.log(props.appData);
-        } else {
-          console.log('3')
-          fetch('https://nadobrounoc-e4493-default-rtdb.europe-west1.firebasedatabase.app/data.json')
-          .then((resp) => resp.json())
-          .then((json) => isMounted && props.setAppData(json))
-        }
-        
-        return () => { isMounted = false };
+        fetch('https://nadobrounoc-e4493-default-rtdb.europe-west1.firebasedatabase.app/data.json')
+            .then((resp) => resp.json())
+            .then((json) => props.setAppData(json))
       }
-    }, []
-  );
+    }, [props.appData]
+);
 
   const fairytale = props.appData && props.appData.fairytales[props.match.params.id - 1];
 
@@ -80,7 +67,9 @@ const Tales = (props) => {
           <div className='audio'><AudioPlayer page={PAGES.tales} tracks={[{...fairytale.audio, image:unicorn}]} /></div>
           : ''  
         }
-          {Array.isArray(fairytale.texttale) && fairytale.texttale.map((paragraph, index) => <Paragraph key={`paragraph${index}`} paragraph={paragraph}/>)}
+          <div className='divpara'>
+            {Array.isArray(fairytale.texttale) && fairytale.texttale.map((paragraph, index) => <Paragraph key={`paragraph${index}`} paragraph={paragraph}/>)}
+          </div>
         </div>
         <div className='buttonstale'>
           <ButtonPrev id={fairytale.id}/>

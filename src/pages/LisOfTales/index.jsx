@@ -17,20 +17,13 @@ const ListOfTales = (props) => {
 
   useEffect(
     () => {
-      let isMounted = true;
       if (!props.appData) {
-        if (localStorage.getItem('fairyTales')) {
-          let data = JSON.parse(localStorage.getItem('fairyTales'));
-          props.setAppData(data)
-        } else {
-          fetch('https://nadobrounoc-e4493-default-rtdb.europe-west1.firebasedatabase.app/data.json')
-          .then((resp) => resp.json())
-          .then((json) => isMounted && props.setAppData(json))
-          return () => { isMounted = false };
-        }
+        fetch('https://nadobrounoc-e4493-default-rtdb.europe-west1.firebasedatabase.app/data.json')
+            .then((resp) => resp.json())
+            .then((json) => props.setAppData(json))
       }
-    }, []
-  );
+    }, [props.appData]
+);
 
   return(
     <>

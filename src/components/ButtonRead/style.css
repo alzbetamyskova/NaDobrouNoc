@@ -13,10 +13,22 @@
   font-size: 15px;
   display: flex;
   align-items: center;
+  transition: all 0.3s ease-in-out;
 }
+
+
+.buttonread:hover {
+	background-color: #FFF48F;
+  color: #3B2E5A;
+}
+
 
 .arrow {
   width: 10px;
   filter: invert(95%) sepia(9%) saturate(3630%) hue-rotate(311deg) brightness(131%) contrast(101%);
   margin-left: 5px;
+}
+
+.arrow:hover {
+  filter: invert(15%) sepia(59%) saturate(609%) hue-rotate(217deg) brightness(99%) contrast(90%);
 }
