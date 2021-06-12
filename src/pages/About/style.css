@@ -6,3 +6,20 @@
 .abouttale h4 {
   font-size: 25px;
 }
+
+.abouttale p {
+  line-height: 135%;
+}
+
+.abouttale a {
+  text-decoration: none;
+  color: #FFF48F;
+  border-radius: 10px;
+  padding: 0 10px 0 10px;
+  background-color: #4EA0AE;
+}
+
+.abouttale a:hover {
+  color: #3B2E5A;
+  background-color: #FFF48F;
+}

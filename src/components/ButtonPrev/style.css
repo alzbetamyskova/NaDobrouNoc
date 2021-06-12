@@ -32,3 +32,15 @@
 .buttonprev:active {
   transform: scale(1);
 }
+
+.disabled {
+  background-color: #b8b8b8;
+  color: #585858;
+  cursor: not-allowed;
+}
+
+.disabled:hover {
+  background-color: #b8b8b8;
+  color: #585858;
+  cursor: not-allowed;
+}

@@ -14,6 +14,9 @@ const ButtonTales = (props) => {
   const handleClick = () => {
     let idTales = randomNumber();
     props.history.push(`/tales/${idTales}`)
+    window.scrollTo({
+      top: 0,
+    });
   };
 
   return(
