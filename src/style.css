@@ -11,6 +11,7 @@ body {
   padding: 0;
   background-image: url("./assets/backround.png");
   color: #FFF48F;
+  position: relative;
 }
 
 .container {
@@ -23,4 +24,16 @@ body {
   background-color: rgba(59, 46, 90, 0.95);
   font-family: 'Quicksand', sans-serif;
   position: relative;
+}
+
+@media screen and (max-width: 760px) {
+  .container {
+    max-width: 760px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    max-width: 500px;
+  }
 }

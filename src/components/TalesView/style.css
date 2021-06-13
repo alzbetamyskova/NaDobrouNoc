@@ -31,3 +31,21 @@
 .talesParagraph {
   margin: 10px 50px 10px 10px;
 }
+
+@media screen and (max-width: 500px) {
+  .talesview {
+    flex-direction: column;
+  }
+
+  .textContainer h3 {
+    align-self: center;
+  }
+
+  .imgContainer img {
+    width: 50%;
+  }
+
+  .talesParagraph {
+    margin: 10px;
+  }
+}

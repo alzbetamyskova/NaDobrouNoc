@@ -32,3 +32,11 @@
 .arrow:hover {
   filter: invert(15%) sepia(59%) saturate(609%) hue-rotate(217deg) brightness(99%) contrast(90%);
 }
+
+@media screen and (max-width: 500px) {
+  .buttonread {
+    align-self: center;
+    min-width: 80%;
+    justify-content: center;
+  }
+}

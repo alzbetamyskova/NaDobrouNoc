@@ -28,3 +28,29 @@
   margin-left: 20px;
   filter: invert(85%) sepia(42%) saturate(422%) hue-rotate(350deg) brightness(105%) contrast(107%);
 }
+
+@media screen and (max-width: 760px) {
+  .header {
+    max-width: 100%;
+    justify-content: space-around;
+  }
+
+  .textlogo, 
+  .moon,
+  .logo {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header {
+    max-width: 100%;
+    justify-content: space-around;
+  }
+
+  .textlogo, 
+  .moon,
+  .logo {
+    display: none;
+  }
+}
