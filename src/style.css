@@ -11,29 +11,30 @@ body {
   padding: 0;
   background-image: url("./assets/backround.png");
   color: #FFF48F;
-  position: relative;
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
   max-width: 900px;
   min-height: 100vh;
   border: 5px solid #4EA0AE;
   border-radius: 20px;
   margin: 0 auto;
-  position: relative;
   background-color: rgba(59, 46, 90, 0.95);
   font-family: 'Quicksand', sans-serif;
-  position: relative;
 }
 
 @media screen and (max-width: 760px) {
   .container {
     max-width: 760px;
+    margin: 0 auto;
   }
 }
 
 @media screen and (max-width: 500px) {
   .container {
     max-width: 500px;
+    margin: 0 auto;
   }
 }

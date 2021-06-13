@@ -8,11 +8,8 @@
   color: #FFF48F;
   padding: 7px;
   cursor: pointer;
-  align-self: flex-end;
   margin: 5px 10px 10px 0;
   font-size: 15px;
-  display: flex;
-  align-items: center;
   transition: all 0.3s ease-in-out;
 }
 
@@ -33,9 +30,14 @@
   filter: invert(15%) sepia(59%) saturate(609%) hue-rotate(217deg) brightness(99%) contrast(90%);
 }
 
+@media screen and (max-width: 760px) {
+  .talesview:nth-child(2n) .buttonread {
+    margin-left: 10px;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .buttonread {
-    align-self: center;
     min-width: 80%;
     justify-content: center;
   }

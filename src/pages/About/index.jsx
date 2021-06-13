@@ -3,7 +3,6 @@ import React from 'react';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import ButtonUp from '../../components/ButtonUp';
-
 import { PAGES } from '../../helpers';
 
 import './style.css';
@@ -27,7 +26,7 @@ const About = () => {
       <p>A na závěr pro vás princezna zanechala jedno poselství. A to zní: Není třeba se bát změnit práci, učit se novým věcem, či zdokonalit starý koníček. Chce to udělat jen první krok. Chcete programovat a dělat takovéto webové aplikace? Tak mrkněte na <a href='https://www.czechitas.cz/' target='_blank'>czechitas.cz</a></p>
     </div>
     <ButtonUp />
-    <Footer fixedbottom={false}/>
+    <Footer />
     </>
   );
 };

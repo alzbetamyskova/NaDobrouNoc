@@ -1,5 +1,6 @@
 .talesview {
   display: flex;
+  flex-wrap: wrap;
   background-color: rgba(255, 255, 255, 0.125);
   border-radius: 20px;
   margin: 20px;
@@ -32,8 +33,33 @@
   margin: 10px 50px 10px 10px;
 }
 
+.buttread {
+  display: flex;
+  flex: 1 0 100%;
+  justify-content: flex-end;
+}
+
+@media screen and (max-width: 760px) {
+  .imgContainer img {
+    margin-top: 55px;
+  }
+
+  .talesview:nth-child(2n) {
+    flex-direction: row-reverse;
+    padding: 20px;
+  }
+
+  .talesview:nth-child(2n) .buttread {
+    justify-content: flex-start;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .talesview {
+    flex-direction: column;
+  }
+
+  .talesview:nth-child(2n) {
     flex-direction: column;
   }
 
@@ -47,5 +73,13 @@
 
   .talesParagraph {
     margin: 10px;
+  }
+
+  .buttread {
+    justify-content: center;
+  }
+
+  .talesview:nth-child(2n) .buttread {
+    justify-content: center;
   }
 }

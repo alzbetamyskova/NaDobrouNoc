@@ -1,3 +1,7 @@
+.audiotales {
+  flex: 1 0 100%;
+}
+
 .audioh3 {
   text-align: center;
   margin: 50px auto;

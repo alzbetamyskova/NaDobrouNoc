@@ -5,11 +5,10 @@ import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import TalesView from '../../components/TalesView';
 import ButtonUp from '../../components/ButtonUp';
-
+import Spinner from '../../components/Spinner';
 import { PAGES } from '../../helpers/index.js';
 
 import './style.css';
-import Spinner from '../../components/Spinner';
 
 const ListOfTales = (props) => {
 

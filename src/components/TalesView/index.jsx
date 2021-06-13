@@ -13,13 +13,15 @@ const TalesView = ({id, name, keywords, text, img}) => {
       <div className='imgContainer'>
         <img src={img ? img : defaultImg} />
       </div>
-      <div className='textContainer'>
-        <h3>{name}</h3>
-      <KeyWords keywords={keywords}/>
-      <div className='talesParagraph'>
-        <Paragraph isElipsis={true} paragraph={text[0]}/>
+        <div className='textContainer'>
+          <h3>{name}</h3>
+        <KeyWords keywords={keywords}/>
+        <div className='talesParagraph'>
+          <Paragraph isElipsis={true} paragraph={text[0]}/>
+        </div>
       </div>
-      <ButtonRead id={id}/>
+      <div className="buttread">
+        <ButtonRead id={id}/>
       </div>
     </div>
   );
