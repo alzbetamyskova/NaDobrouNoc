@@ -1,3 +1,7 @@
+.listoftales {
+  flex: 1 0 100%;
+}
+
 .nadpisSeznam{
   margin-left: 30px;
   margin-bottom: 40px;

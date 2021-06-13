@@ -28,7 +28,7 @@ const ListOfTales = (props) => {
     <>
     <Header page={PAGES.listoftales}/>
     {!props.appData ? <Spinner /> :
-    <div>
+    <div className='listoftales'>
       <Filter appData={props.appData} setViewTales={setViewTales}/>
       <h4 className='nadpisSeznam'>Seznam všech pohádek</h4>
       <div>
